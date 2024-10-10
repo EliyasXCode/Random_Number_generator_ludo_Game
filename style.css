@@ -1,0 +1,159 @@
+/* General styling for body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGdyYWluaHxlbnwwfHx8fDE2Mzg1MDcwMjQ&ixlib=rb-1.2.1&q=80&w=1080'); /* Game background */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Styling the title */
+h1 {
+    text-align: center; /* Center title alignment */
+    font-size: 28px; /* Decreased font size */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling the game area */
+#gameArea {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 5px solid #444;
+    border-radius: 15px;
+    padding: 15px; /* Further decreased padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    max-width: 700px; /* Decreased width by an additional 15% */
+    position: relative;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+#gameArea:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling the game board */
+#board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px; /* Decreased gap */
+    margin-bottom: 20px;
+    background-image: url('https://w0.peakpx.com/wallpaper/507/64/HD-wallpaper-ludo-game-mode-pic.jpg'); /* Board background image */
+    background-size: cover;
+    background-position: center;
+    padding: 6px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style each cell with faint colors */
+.cell {
+    width: 50px; /* Decreased width */
+    height: 50px; /* Decreased height */
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.6); /* Faint color for all boxes */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:nth-child(10n+1) {
+    background-color: rgba(255, 204, 204, 0.5); /* Faint Red */
+}
+.cell:nth-child(10n+2) {
+    background-color: rgba(173, 216, 230, 0.5); /* Faint Blue */
+}
+.cell:nth-child(10n+3) {
+    background-color: rgba(144, 238, 144, 0.5); /* Faint Green */
+}
+.cell:nth-child(10n+4) {
+    background-color: rgba(255, 255, 224, 0.5); /* Faint Yellow */
+}
+
+.cell:hover {
+    background-color: rgba(230, 230, 230, 0.9);
+    transform: scale(1.05);
+}
+
+/* Token appearance with faster movement */
+.token {
+    width: 45px; /* Decreased width */
+    height: 45px; /* Decreased height */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 16px; /* Decreased font size */
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+}
+
+.token:hover {
+    transform: rotate(360deg);
+}
+
+/* Individual player colors */
+#player1 { background-color: #ff4c4c; }
+#player2 { background-color: #4c6fff; }
+#player3 { background-color: #4cff88; }
+#player4 { background-color: #ffeb4c; }
+
+/* Token container styling */
+#tokenContainer {
+    display: flex; /* Align tokens horizontally */
+    justify-content: center; /* Center the tokens */
+    margin-top: 10px; /* Margin above tokens */
+}
+
+/* Dice styling */
+#dice {
+    font-size: 28px; /* Decreased font size */
+    margin-bottom: 12px;
+    background-color: #f1f1f1;
+    width: 60px; /* Decreased width */
+    height: 60px; /* Decreased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 10px 18px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Winner announcement styling */
+#winnerAnnouncement {
+    font-size: 22px; /* Decreased font size */
+    color: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Turn indicator styling */
+#turnIndicator {
+    font-size: 18px; /* Decreased font size */
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
